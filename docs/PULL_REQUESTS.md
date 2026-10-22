@@ -13,7 +13,7 @@ This guide is for first-time contributors and for people (and AI agents) who con
 ```bash
 git clone https://github.com/<you>/mail-notifier-hub.git
 cd mail-notifier-hub
-git remote add upstream https://github.com/ms-jahan/mail-notifier-hub.git
+git remote add upstream https://github.com/MS-Jahan/mail-notifier-hub.git
 ```
 
 ## 2. Create a branch (never work on `main`)

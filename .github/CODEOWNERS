@@ -1,7 +1,7 @@
 # Every change needs a review from the maintainer; the files below can change what the extension may access.
-*                       @ms-jahan
-/src/manifest/          @ms-jahan
-/src/core/url.js        @ms-jahan
-/build.mjs              @ms-jahan
-/scripts/               @ms-jahan
-/.github/               @ms-jahan
+*                       @MS-Jahan
+/src/manifest/          @MS-Jahan
+/src/core/url.js        @MS-Jahan
+/build.mjs              @MS-Jahan
+/scripts/               @MS-Jahan
+/.github/               @MS-Jahan

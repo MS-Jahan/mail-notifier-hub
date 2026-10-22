@@ -24,4 +24,4 @@ Mail Notifier Hub is an independent, open-source browser extension. It is not ma
 Turn providers, accounts, notifications and sound off in Settings, or uninstall the extension to delete all stored data. *Copy diagnostics* produces a report without e-mail addresses or message text, which you may choose to share.
 
 ## Contact
-Open an issue at https://github.com/ms-jahan/mail-notifier-hub/issues (use a private security advisory for vulnerabilities).
+Open an issue at https://github.com/MS-Jahan/mail-notifier-hub/issues (use a private security advisory for vulnerabilities).
