@@ -1,6 +1,6 @@
 # AGENTS.md: guide for AI coding agents (and humans in a hurry)
 
-Mail Notifier Hub is a Manifest V3 browser extension (Chrome/Brave/Edge + Firefox). It shows unread counts and notifications for Gmail, Proton Mail and Zoho Mail using the user's existing browser session. Plain JavaScript (ES modules), **no runtime dependencies, no bundler**. Node 20+ for tooling.
+Mail Notifier Hub is a Manifest V3 browser extension (Chrome/Brave/Edge + Firefox). It shows unread counts and notifications for Gmail, Proton Mail and Zoho Mail using the user's existing browser session. Plain JavaScript (ES modules), **no runtime dependencies, no bundler**. Node 22+ for tooling.
 
 ## Commands
 ```bash
