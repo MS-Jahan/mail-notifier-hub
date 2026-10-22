@@ -13,13 +13,13 @@
     "url": "https://github.com/ms-jahan/mail-notifier-hub/issues"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
     "build": "node build.mjs",
     "release:zip": "node build.mjs --zip",
     "lint:firefox": "npx --yes web-ext@8 lint -s dist/firefox",
-    "test": "node --test tests/unit",
+    "test": "node --test \"tests/unit/*.test.js\"",
     "canary": "node tests/e2e/canary.mjs",
     "version:next": "node scripts/next-version.mjs"
   }

@@ -5,7 +5,7 @@ This guide is for first-time contributors and for people (and AI agents) who con
 ## 0. Before you start
 - Small fix (typo, bug)? Go straight to step 1.
 - New feature or provider? **Open an issue first** (use the *Provider request* template) and say you want to work on it, so nobody duplicates the effort and the approach is agreed.
-- Requirements: Git, Node 20 or newer (`node -v`), a Chromium browser or Firefox for manual tests.
+- Requirements: Git, Node 22 or newer (`node -v`), a Chromium browser or Firefox for manual tests.
 
 ## 1. Fork and clone
 1. Click **Fork** (top right of the repository page). GitHub creates `https://github.com/<you>/mail-notifier-hub`.

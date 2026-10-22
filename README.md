@@ -26,7 +26,7 @@ A pinned tab per mailbox costs about 150–200 MB each, all day. This extension 
 ```bash
 git clone https://github.com/ms-jahan/mail-notifier-hub.git
 cd mail-notifier-hub
-npm test                 # unit tests (Node 20+)
+npm test                 # unit tests (Node 22+)
 node build.mjs           # writes dist/chrome and dist/firefox (dev version 0.0.0)
 node build.mjs --zip --version 1.2.3   # also writes store zips with a given version
 ```
