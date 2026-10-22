@@ -1,0 +1,57 @@
+name: Release
+
+# Every push to main (that is, every merged pull request) is examined. If it contains a releasable change
+# (feat, fix, perf, revert or a breaking change) a new version is tagged and published with the store zips.
+# Docs/chore/ci/test-only merges do not create a release. See docs/RELEASING.md.
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # create the tag and the GitHub Release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # full history and tags, needed to decide the next version
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Tests and checks
+        run: |
+          npm test
+          node scripts/security-lint.mjs
+
+      - name: Decide the next version
+        id: version
+        run: |
+          VERSION="$(node scripts/next-version.mjs)"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          if [ -z "$VERSION" ]; then echo "No releasable commits since the last tag: skipping release." ; fi
+
+      - name: Build and lint
+        if: steps.version.outputs.version != ''
+        run: |
+          node build.mjs --zip --version "${{ steps.version.outputs.version }}"
+          npx --yes web-ext@8 lint -s dist/firefox
+
+      - name: Publish the GitHub Release
+        if: steps.version.outputs.version != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          node scripts/release-notes.mjs > release-notes.md
+          gh release create "v$VERSION" dist/*.zip \
+            --target "$GITHUB_SHA" \
+            --title "v$VERSION" \
+            --notes-file release-notes.md

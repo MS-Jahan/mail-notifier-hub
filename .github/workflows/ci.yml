@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+
+# Read-only token. Pull requests from forks run with this and never see secrets. (This workflow deliberately uses
+# `pull_request`, not `pull_request_target`, so code from a fork is never run with write access.)
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Unit tests
+        run: npm test
+      - name: Security lint (no HTML sinks, no eval, no undeclared hosts)
+        run: node scripts/security-lint.mjs
+      - name: Build
+        run: node build.mjs
+      - name: Lint the Firefox build
+        run: npx --yes web-ext@8 lint -s dist/firefox
+      - name: Permission report
+        run: node scripts/permission-report.mjs >> "$GITHUB_STEP_SUMMARY"
+
+  pr-title:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: PR title is a Conventional Commit
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}   # passed through env, never interpolated into the script
+        run: node scripts/check-pr-title.mjs "$PR_TITLE"

@@ -1,0 +1,22 @@
+name: Provider request
+description: Ask for support for another webmail service
+labels: [provider]
+body:
+  - type: input
+    id: provider
+    attributes:
+      label: Provider and web address
+      placeholder: Outlook.com — https://outlook.live.com
+    validations: { required: true }
+  - type: textarea
+    id: notes
+    attributes:
+      label: What you know
+      description: "Do you use several accounts? Is there a data-center or region in the URL? Have you seen how the web app loads unread mail (DevTools → Network)? Never paste cookies, tokens or message text."
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Help
+      options:
+        - label: I can test a pull request with my account
+        - label: I would like to implement it (see docs/ADDING_A_PROVIDER.md)
