@@ -23,7 +23,7 @@ The highest level since the last tag wins. If nothing releasable is found the wo
 6. creates the tag `vX.Y.Z` and a **GitHub Release** with `mail-notifier-hub-chrome-X.Y.Z.zip` and `mail-notifier-hub-firefox-X.Y.Z.zip` attached.
 
 ## Publishing to the stores (manual for now)
-Upload the release zips to the Chrome Web Store and to addons.mozilla.org. Texts for the listing and privacy policy: `docs/privacy-policy.md`. The Firefox add-on ID in `build.mjs` (`mail-notifier-hub@MS-Jahan.github.io`) must stay the same forever once published.
+Upload the release zips to the Chrome Web Store and to addons.mozilla.org. Texts for the listing and privacy policy: `docs/privacy-policy.md`. The Firefox add-on ID in `build.mjs` (`mail-notifier-hub@ms-jahan.github.io`) must stay the same forever once published.
 
 ## Hotfixes and mistakes
 - A broken release: merge a `fix:` PR (patch release) or `revert:`; do not delete tags that others may have installed.

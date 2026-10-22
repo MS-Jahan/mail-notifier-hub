@@ -19,7 +19,7 @@ const overlays = {
   },
   firefox: {
     background: { scripts: ['background/index.js'], type: 'module' },
-    browser_specific_settings: { gecko: { id: 'mail-notifier-hub@MS-Jahan.github.io', strict_min_version: '128.0', data_collection_permissions: { required: ['none'] } } }
+    browser_specific_settings: { gecko: { id: 'mail-notifier-hub@ms-jahan.github.io', strict_min_version: '128.0', data_collection_permissions: { required: ['none'] } } }
   }
 };
 rmSync('dist', { recursive: true, force: true });
