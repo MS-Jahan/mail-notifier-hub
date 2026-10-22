@@ -1,4 +1,13 @@
-# Recommended repository settings
+# Repository settings
+
+**Applied on 2026-10-22** to `MS-Jahan/mail-notifier-hub` (verify any time in *Settings*):
+- `main` is protected: pull request required, 1 approval and code-owner review required (administrators are not forced, so the owner can merge their own PRs with `gh pr merge --admin`), status checks `checks` and `pr-title` required and up to date, conversations resolved, linear history, no force pushes or deletion.
+- Squash merge only (title = PR title), merged branches deleted automatically.
+- Actions: default token read-only, only GitHub-owned actions allowed, approval required for every outside contributor's workflow run, Actions cannot approve PRs.
+- Secret scanning, push protection, Dependabot alerts and security updates, and private vulnerability reporting are on.
+- Labels `bug`, `provider`, `docs`, `security`, `good first issue`, `help wanted`; topics set.
+
+The rest of this page explains the settings and the commands that apply them.
 
 Apply these once in *Settings* on GitHub (or with the `gh` commands). They keep `main` safe and make the automatic releases trustworthy.
 
@@ -9,7 +18,7 @@ Apply these once in *Settings* on GitHub (or with the `gh` commands). They keep 
 - Because the `Release` workflow only creates tags and releases with the workflow token and does not push commits, it works with these protections.
 
 ```bash
-gh api -X PUT repos/ms-jahan/mail-notifier-hub/branches/main/protection --input - <<'JSON'
+gh api -X PUT repos/MS-Jahan/mail-notifier-hub/branches/main/protection --input - <<'JSON'
 { "required_status_checks": { "strict": true, "contexts": ["checks", "pr-title"] },
   "enforce_admins": false,
   "required_pull_request_reviews": { "required_approving_review_count": 1, "require_code_owner_reviews": true },
@@ -21,7 +30,7 @@ JSON
 ## Pull requests
 - Allow **squash merging only**; default the commit message to the **pull request title**. Disable merge commits and rebase merging.
 ```bash
-gh api -X PATCH repos/ms-jahan/mail-notifier-hub -f allow_squash_merge=true -f allow_merge_commit=false -f allow_rebase_merge=false \
+gh api -X PATCH repos/MS-Jahan/mail-notifier-hub -f allow_squash_merge=true -f allow_merge_commit=false -f allow_rebase_merge=false \
   -f squash_merge_commit_title=PR_TITLE -f squash_merge_commit_message=BLANK -f delete_branch_on_merge=true
 ```
 

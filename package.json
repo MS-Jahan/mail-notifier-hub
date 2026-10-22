@@ -7,10 +7,10 @@
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ms-jahan/mail-notifier-hub.git"
+    "url": "git+https://github.com/MS-Jahan/mail-notifier-hub.git"
   },
   "bugs": {
-    "url": "https://github.com/ms-jahan/mail-notifier-hub/issues"
+    "url": "https://github.com/MS-Jahan/mail-notifier-hub/issues"
   },
   "engines": {
     "node": ">=22"

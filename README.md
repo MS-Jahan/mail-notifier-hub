@@ -16,7 +16,7 @@ A pinned tab per mailbox costs about 150–200 MB each, all day. This extension 
 
 ## Install
 
-**From a release (recommended):** download the zip for your browser from the [Releases page](https://github.com/ms-jahan/mail-notifier-hub/releases).
+**From a release (recommended):** download the zip for your browser from the [Releases page](https://github.com/MS-Jahan/mail-notifier-hub/releases).
 
 - **Chrome / Brave / Edge:** unzip `mail-notifier-hub-chrome-<version>.zip` into a folder → open `chrome://extensions` → turn on *Developer mode* → *Load unpacked* → pick the folder.
 - **Firefox:** open `about:debugging#/runtime/this-firefox` → *Load Temporary Add-on* → pick `manifest.json` from the unzipped `mail-notifier-hub-firefox-<version>.zip` (temporary add-ons are removed when Firefox closes until the store version is published).
@@ -24,7 +24,7 @@ A pinned tab per mailbox costs about 150–200 MB each, all day. This extension 
 **From source:**
 
 ```bash
-git clone https://github.com/ms-jahan/mail-notifier-hub.git
+git clone https://github.com/MS-Jahan/mail-notifier-hub.git
 cd mail-notifier-hub
 npm test                 # unit tests (Node 22+)
 node build.mjs           # writes dist/chrome and dist/firefox (dev version 0.0.0)

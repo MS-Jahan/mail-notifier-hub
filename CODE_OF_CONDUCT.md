@@ -6,4 +6,4 @@ We want this project to be a welcoming place for everyone, whatever their backgr
 
 **Not accepted:** harassment, insults, discrimination, personal attacks, publishing other people's private information (including mail content, e-mail addresses and tokens), spam, or pressuring maintainers.
 
-Maintainers may edit or remove comments, close issues and pull requests, and block people who break these rules. To report a problem, contact the maintainer ([@ms-jahan](https://github.com/ms-jahan)) through a private GitHub message or a [security advisory](https://github.com/ms-jahan/mail-notifier-hub/security/advisories/new) if it is sensitive.
+Maintainers may edit or remove comments, close issues and pull requests, and block people who break these rules. To report a problem, contact the maintainer ([@MS-Jahan](https://github.com/ms-jahan)) through a private GitHub message or a [security advisory](https://github.com/MS-Jahan/mail-notifier-hub/security/advisories/new) if it is sensitive.
