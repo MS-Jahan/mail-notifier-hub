@@ -1,0 +1,26 @@
+{
+  "name": "mail-notifier-hub",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "One browser extension for unread counts and notifications from many webmail providers, using your browser session.",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ms-jahan/mail-notifier-hub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ms-jahan/mail-notifier-hub/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "release:zip": "node build.mjs --zip",
+    "lint:firefox": "npx --yes web-ext@8 lint -s dist/firefox",
+    "test": "node --test tests/unit",
+    "canary": "node tests/e2e/canary.mjs",
+    "version:next": "node scripts/next-version.mjs"
+  }
+}

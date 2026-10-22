@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Mail Notifier Hub options</title><link rel="stylesheet" href="../ui/base.css">
+<style>body{max-width:600px;margin:24px auto;padding:0 16px}h1{margin-top:0}label{display:block;margin:14px 0 4px;font-weight:600}input[type=number]{width:100px;padding:4px}fieldset{border:1px solid var(--border);border-radius:8px;margin:14px 0}.row{display:flex;gap:8px;align-items:center;margin:4px 0}.row label{margin:0;font-weight:400}.prov{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-right:6px}</style></head>
+<body>
+  <h1>Mail Notifier Hub</h1>
+  <p data-i18n="optIntro">No setup needed.</p>
+  <fieldset><legend data-i18n="optProviders">Mail providers</legend><div id="providers"></div></fieldset>
+  <fieldset><legend data-i18n="optAccounts">Accounts</legend><div id="accounts"></div><button id="rescan" type="button" data-i18n="optRescan">Rescan accounts</button></fieldset>
+  <label for="intervalMin" data-i18n="optInterval">Check every (minutes)</label><input id="intervalMin" type="number" min="2">
+  <label for="recentMin" data-i18n="optRecent">Only notify for mail newer than (minutes)</label><input id="recentMin" type="number" min="1">
+  <div class="row"><input id="scanOnVisit" type="checkbox"><label for="scanOnVisit" data-i18n="optScanOnVisit">Rescan accounts when I open a provider's site</label></div>
+  <div class="row"><input id="notify" type="checkbox"><label for="notify" data-i18n="optNotify">Desktop notifications</label></div>
+  <div class="row"><input id="sound" type="checkbox"><label for="sound" data-i18n="optSound">Play a sound</label><button id="testSound" type="button" data-i18n="optTest">Test</button></div>
+  <label for="theme" data-i18n="optTheme">Theme</label><select id="theme"><option value="system" data-i18n="system">System</option><option value="light" data-i18n="light">Light</option><option value="dark" data-i18n="dark">Dark</option></select>
+  <fieldset><legend data-i18n="optSupport">Support</legend><button id="diagnostics" type="button" data-i18n="optDiagnostics">Copy diagnostics</button> <span data-i18n="optDiagnosticsHint">Copies a report without e-mail addresses or message text, to paste into a GitHub issue.</span></fieldset>
+  <p id="msg" aria-live="polite"></p>
+  <script type="module" src="options.js"></script>
+</body></html>

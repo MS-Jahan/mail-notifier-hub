@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../ui/base.css"><link rel="stylesheet" href="../ui/themes.css"><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-archive" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3H3.5L2 7v2h1v11a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V9h1V7l-1.5-4ZM5 9h14v10H5V9Zm3.5 2v2h7v-2h-7ZM4.2 5h15.6l.5 2H3.7l.5-2Z"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3h6l1 1h4v2H4V4h4l1-1ZM5 8h14l-1 12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1L5 8Zm4 2v8h2v-8H9Zm4 0v8h2v-8h-2Z"/></symbol>
+    <symbol id="i-spam" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 1 21h22L12 2Zm-1 7h2v6h-2V9Zm0 8h2v2h-2v-2Z"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><path fill="currentColor" d="M19.4 13a7.5 7.5 0 0 0 0-2l2.1-1.6a.5.5 0 0 0 .1-.6l-2-3.5a.5.5 0 0 0-.6-.2l-2.5 1a7.3 7.3 0 0 0-1.7-1l-.4-2.6a.5.5 0 0 0-.5-.4h-4a.5.5 0 0 0-.5.4l-.4 2.6a7.3 7.3 0 0 0-1.7 1l-2.5-1a.5.5 0 0 0-.6.2l-2 3.5a.5.5 0 0 0 .1.6L4.6 11a7.5 7.5 0 0 0 0 2l-2.1 1.6a.5.5 0 0 0-.1.6l2 3.5c.1.2.4.3.6.2l2.5-1c.5.4 1.1.7 1.7 1l.4 2.6c0 .2.2.4.5.4h4c.3 0 .5-.2.5-.4l.4-2.6c.6-.3 1.2-.6 1.7-1l2.5 1c.2.1.5 0 .6-.2l2-3.5a.5.5 0 0 0-.1-.6L19.4 13ZM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z"/></symbol>
+    <symbol id="i-theme" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 2v14a7 7 0 0 1 0-14Z"/></symbol>
+    <symbol id="i-open" viewBox="0 0 24 24"><path fill="currentColor" d="M14 3h7v7h-2V6.4l-8.3 8.3-1.4-1.4L17.6 5H14V3ZM5 5h6v2H5v12h12v-6h2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path fill="currentColor" d="M17.7 6.3A8 8 0 1 0 20 12h-2a6 6 0 1 1-1.8-4.3L13 11h8V3l-3.3 3.3Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24"><path fill="currentColor" d="M15.4 6 14 4.6 6.6 12 14 19.4 15.4 18 9.4 12l6-6Z"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path fill="currentColor" d="M8.6 6 10 4.6l7.4 7.4-7.4 7.4L8.6 18l6-6-6-6Z"/></symbol>
+  </svg>
+  
+  <div class="stripe" aria-hidden="true"></div>
+  <header>
+    <div class="acct" id="acct"><button id="menu" aria-haspopup="listbox" aria-expanded="false"><span id="email">Mail Notifier Hub</span> <span aria-hidden="true">▾</span></button>
+      <ul id="accounts" role="listbox" hidden></ul></div>
+    <div class="pager"><span id="pos"></span>
+      <button class="icon" id="prev" data-i18n-aria="previous"><svg><use href="#i-prev"/></svg></button>
+      <button class="icon" id="next" data-i18n-aria="next"><svg><use href="#i-next"/></svg></button></div>
+  </header>
+  <main id="msg" aria-live="polite"></main>
+  <footer>
+    <button id="markread" class="primary"><svg><use href="#i-check"/></svg><span data-i18n="markRead">Mark as Read</span></button>
+    <span class="spacer"></span>
+    <button class="icon" id="archive" data-i18n-title="archive" data-i18n-aria="archive"><svg><use href="#i-archive"/></svg></button>
+    <button class="icon" id="spam" data-i18n-title="spam" data-i18n-aria="spam"><svg><use href="#i-spam"/></svg></button>
+    <button class="icon" id="trash" data-i18n-title="trash" data-i18n-aria="trash"><svg><use href="#i-trash"/></svg></button>
+    <span class="sep"></span>
+    <button class="icon" id="theme" data-i18n-title="theme" data-i18n-aria="theme"><svg><use href="#i-theme"/></svg></button>
+    <button class="icon" id="open" data-i18n-title="openMail" data-i18n-aria="openMail"><svg><use href="#i-open"/></svg></button>
+    <button class="icon" id="refresh" data-i18n-title="refresh" data-i18n-aria="refresh"><svg><use href="#i-refresh"/></svg></button>
+    <button class="icon" id="settings" data-i18n-title="settings" data-i18n-aria="settings"><svg><use href="#i-gear"/></svg></button>
+  </footer>
+  <script type="module" src="popup.js"></script>
+</body></html>

@@ -1,0 +1,134 @@
+{
+  "extName": {
+    "message": "মেইল নোটিফায়ার হাব"
+  },
+  "extDesc": {
+    "message": "জিমেইল, প্রোটন মেইল, জোহো মেইল ও আরও অনেকের অপঠিত সংখ্যা ও নোটিফিকেশন এক এক্সটেনশনে, আপনার ব্রাউজার সেশন ব্যবহার করে।"
+  },
+  "signIn": {
+    "message": "এই ব্রাউজারে আপনার কোনো মেইল অ্যাকাউন্টে সাইন ইন করুন।"
+  },
+  "openMail": {
+    "message": "ওয়েব অ্যাপে খুলুন"
+  },
+  "noUnread": {
+    "message": "কোনো অপঠিত মেইল নেই"
+  },
+  "noSubject": {
+    "message": "(বিষয় নেই)"
+  },
+  "markRead": {
+    "message": "পঠিত হিসেবে চিহ্নিত করুন"
+  },
+  "archive": {
+    "message": "আর্কাইভ"
+  },
+  "spam": {
+    "message": "স্প্যাম"
+  },
+  "trash": {
+    "message": "ট্র্যাশে পাঠান"
+  },
+  "refresh": {
+    "message": "রিফ্রেশ"
+  },
+  "settings": {
+    "message": "সেটিংস"
+  },
+  "theme": {
+    "message": "থিম"
+  },
+  "previous": {
+    "message": "আগের"
+  },
+  "next": {
+    "message": "পরের"
+  },
+  "ofTotal": {
+    "message": "$2 এর মধ্যে $1",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "markFailed": {
+    "message": "কাজটি ব্যর্থ: $1",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "checkFailed": {
+    "message": "সর্বশেষ চেক ব্যর্থ: $1",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "optProviders": {
+    "message": "মেইল প্রোভাইডার"
+  },
+  "optAccounts": {
+    "message": "অ্যাকাউন্ট"
+  },
+  "optInterval": {
+    "message": "কত মিনিট পরপর চেক করবে (সর্বনিম্ন ২)"
+  },
+  "optRecent": {
+    "message": "শুধু এত মিনিটের নতুন মেইলের জন্য জানাবে"
+  },
+  "optNotify": {
+    "message": "ডেস্কটপ নোটিফিকেশন"
+  },
+  "optSound": {
+    "message": "নতুন মেইলে শব্দ বাজান"
+  },
+  "optTest": {
+    "message": "পরীক্ষা"
+  },
+  "optTheme": {
+    "message": "থিম"
+  },
+  "saved": {
+    "message": "সংরক্ষিত।"
+  },
+  "optIntro": {
+    "message": "কোনো সেটআপ লাগবে না: এই ব্রাউজারে মেইলে সাইন ইন করুন, এক্সটেনশন সেই সেশন ব্যবহার করবে। কোনো মেইল প্রোভাইডারের সাথে সম্পর্কিত নয়।"
+  },
+  "system": {
+    "message": "সিস্টেম"
+  },
+  "light": {
+    "message": "হালকা"
+  },
+  "dark": {
+    "message": "গাঢ়"
+  },
+  "noAccounts": {
+    "message": "এখনো কোনো সাইন-ইন করা অ্যাকাউন্ট পাওয়া যায়নি।"
+  },
+  "optRescan": {
+    "message": "অ্যাকাউন্ট আবার স্ক্যান করুন"
+  },
+  "optScanOnVisit": {
+    "message": "প্রোভাইডারের সাইট খুললে অ্যাকাউন্ট আবার স্ক্যান করুন"
+  },
+  "optSupport": {
+    "message": "সহায়তা"
+  },
+  "optDiagnostics": {
+    "message": "ডায়াগনস্টিক্স কপি করুন"
+  },
+  "optDiagnosticsHint": {
+    "message": "ইমেইল ঠিকানা বা মেইলের লেখা ছাড়া একটা রিপোর্ট কপি হয়, GitHub issue-তে পেস্ট করার জন্য।"
+  },
+  "copied": {
+    "message": "ক্লিপবোর্ডে কপি হয়েছে।"
+  }
+}

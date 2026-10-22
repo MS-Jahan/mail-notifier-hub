@@ -1,0 +1,13 @@
+/* One block per provider (light + dark accent). Add a block when you add a provider. */
+:root[data-provider=zoho] { --accent: #226db4; --accent-fg: #fff; --surface: #f4f8fc; --hover: rgba(34,109,180,.1); --border: #dbe3ec;
+  --stripe: linear-gradient(90deg, #e42527 0 25%, #089949 25% 50%, #226db4 50% 75%, #f9b21d 75% 100%); }
+:root[data-provider=proton] { --accent: #6d4aff; --accent-fg: #fff; --surface: #f7f6ff; --hover: rgba(109,74,255,.1); --border: #e5e2f5; }
+:root[data-provider=gmail] { --accent: #d93025; --accent-fg: #fff; --surface: #fdf6f5; --hover: rgba(217,48,37,.08); --border: #eadcda; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light])[data-provider=zoho] { --accent: #4d9be6; --accent-fg: #0b1a2b; --surface: #1b232d; --hover: rgba(98,167,235,.16); --border: #2b3643; --bg: #151b23; }
+  :root:not([data-theme=light])[data-provider=proton] { --accent: #8b74ff; --accent-fg: #100c25; --surface: #1d1a2a; --hover: rgba(159,138,255,.16); --border: #2e2b45; --bg: #16141c; }
+  :root:not([data-theme=light])[data-provider=gmail] { --accent: #f28b82; --accent-fg: #2a0b09; --surface: #261c1b; --hover: rgba(242,139,130,.14); --border: #3d2f2d; --bg: #1a1514; }
+}
+:root[data-theme=dark][data-provider=zoho] { --accent: #4d9be6; --accent-fg: #0b1a2b; --surface: #1b232d; --hover: rgba(98,167,235,.16); --border: #2b3643; --bg: #151b23; }
+:root[data-theme=dark][data-provider=proton] { --accent: #8b74ff; --accent-fg: #100c25; --surface: #1d1a2a; --hover: rgba(159,138,255,.16); --border: #2e2b45; --bg: #16141c; }
+:root[data-theme=dark][data-provider=gmail] { --accent: #f28b82; --accent-fg: #2a0b09; --surface: #261c1b; --hover: rgba(242,139,130,.14); --border: #3d2f2d; --bg: #1a1514; }

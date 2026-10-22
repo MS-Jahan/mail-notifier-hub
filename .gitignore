@@ -1,0 +1,8 @@
+node_modules/
+dist/
+web-ext-artifacts/
+*.log
+.DS_Store
+# local scratch: never commit captures of real mail
+/captures/
+*.har

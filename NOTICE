@@ -1,0 +1,5 @@
+Mail Notifier Hub
+Not affiliated with, endorsed by or sponsored by Google, Proton, Zoho or any other mail provider. Provider names are used only to say which service a feature works with.
+
+Prior art and credit
+- Gmail Notifier (https://github.com/inbasic/ignotifier) by "inbasic" showed that Gmail's Atom feed can be used from a browser session to count unread mail. No code from it is included here. See docs/gmail-notifier-license.md.

@@ -1,0 +1,22 @@
+body { width: 480px; height: 340px; display: flex; flex-direction: column; }
+header, footer { display: flex; align-items: center; justify-content: space-between; padding: 6px 10px; background: var(--surface); }
+header { border-bottom: 1px solid var(--border); }
+footer { border-top: 1px solid var(--border); gap: 4px; padding: 8px 10px; }
+.spacer { flex: 1; }
+.acct { position: relative; } #menu { border-color: var(--border); background: var(--bg); height: 36px; font-weight: 600; }
+#accounts { position: absolute; z-index: 2; margin: 2px 0 0; padding: 4px 0; list-style: none; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,.25); min-width: 260px; }
+#accounts li { padding: 10px 14px; cursor: pointer; } #accounts li:hover { background: var(--hover); }
+#accounts li[aria-selected=true]::before { content: '✓ '; color: var(--accent); font-weight: 700; }
+.sep { width: 1px; height: 24px; background: var(--border); margin: 0 4px; }
+#trash:hover:not(:disabled), #spam:hover:not(:disabled) { color: var(--danger); }
+.pager { display: flex; align-items: center; gap: 2px; color: var(--muted); }
+.pager button.icon { width: 36px; height: 36px; }
+main { flex: 1; overflow: auto; padding: 14px 16px; }
+.subject { font-size: 17px; font-weight: 600; margin: 0 0 6px; word-break: break-word; color: var(--fg); }
+.meta { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); margin-bottom: 10px; }
+.preview { white-space: pre-wrap; word-break: break-word; font-size: 14px; }
+.empty { color: var(--muted); text-align: center; margin-top: 70px; font-size: 14px; }
+button.primary span { white-space: nowrap; }
+
+.prov { font-size: 11px; color: var(--muted); margin-right: 6px; text-transform: uppercase; letter-spacing: .04em; }
+.hide { display: none !important; }

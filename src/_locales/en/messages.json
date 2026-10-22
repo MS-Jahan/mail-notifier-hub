@@ -1,0 +1,134 @@
+{
+  "extName": {
+    "message": "Mail Notifier Hub"
+  },
+  "extDesc": {
+    "message": "One extension for unread counts and notifications from Gmail, Proton Mail, Zoho Mail and more, using your browser sessions."
+  },
+  "signIn": {
+    "message": "Sign in to one of your mail accounts in this browser."
+  },
+  "openMail": {
+    "message": "Open in web app"
+  },
+  "noUnread": {
+    "message": "No unread mail"
+  },
+  "noSubject": {
+    "message": "(no subject)"
+  },
+  "markRead": {
+    "message": "Mark as Read"
+  },
+  "archive": {
+    "message": "Archive"
+  },
+  "spam": {
+    "message": "Report spam"
+  },
+  "trash": {
+    "message": "Move to Trash"
+  },
+  "refresh": {
+    "message": "Refresh"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "theme": {
+    "message": "Theme"
+  },
+  "previous": {
+    "message": "Previous"
+  },
+  "next": {
+    "message": "Next"
+  },
+  "ofTotal": {
+    "message": "$1 of $2",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "markFailed": {
+    "message": "Action failed: $1",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "checkFailed": {
+    "message": "Last check failed: $1",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "optProviders": {
+    "message": "Mail providers"
+  },
+  "optAccounts": {
+    "message": "Accounts"
+  },
+  "optInterval": {
+    "message": "Check every (minutes, minimum 2)"
+  },
+  "optRecent": {
+    "message": "Only notify for mail newer than (minutes)"
+  },
+  "optNotify": {
+    "message": "Desktop notifications"
+  },
+  "optSound": {
+    "message": "Play a sound for new mail"
+  },
+  "optTest": {
+    "message": "Test"
+  },
+  "optTheme": {
+    "message": "Theme"
+  },
+  "saved": {
+    "message": "Saved."
+  },
+  "optIntro": {
+    "message": "No setup needed: sign in to your mail in this browser and the extension uses that session. Not affiliated with any mail provider."
+  },
+  "system": {
+    "message": "System"
+  },
+  "light": {
+    "message": "Light"
+  },
+  "dark": {
+    "message": "Dark"
+  },
+  "noAccounts": {
+    "message": "No signed-in accounts found yet."
+  },
+  "optRescan": {
+    "message": "Rescan accounts"
+  },
+  "optScanOnVisit": {
+    "message": "Rescan accounts when I open a provider's site"
+  },
+  "optSupport": {
+    "message": "Support"
+  },
+  "optDiagnostics": {
+    "message": "Copy diagnostics"
+  },
+  "optDiagnosticsHint": {
+    "message": "Copies a report without e-mail addresses or message text, to paste into a GitHub issue."
+  },
+  "copied": {
+    "message": "Copied to the clipboard."
+  }
+}
